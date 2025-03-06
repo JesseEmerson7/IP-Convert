@@ -14,7 +14,7 @@ function convertIPV4(ip) {
     return "";
   }
   //handle binary 8 bit base 2 input
-  const ipArr = ip.split(".");
+  const ipArr = ip.trim().split(/[. ]+/);
   if (ipArr[0].length === 8) {
     return ipArr
       .map((num) => {
